@@ -38,11 +38,13 @@
 // }
 // console.log(cricketerNames(["Rohit", "Dhoni", "Dhawan","ABD","Virat"],"ABD"))
 
-var orderedNumber = [1,2,3,4,5]
-var reversedNumber = []
-var i=0
-for (var j=orderedNumber.length; j>0; j--){
-	reversedNumber[i]=orderedNumber[j-1]
-	i++
-}
-console.log(reversedNumber)
+// var orderedNumber = [1,2,3,4,5]
+// var reversedNumber = []
+// var i=0
+// for (var j=orderedNumber.length; j>0; j--){
+// 	reversedNumber[i]=orderedNumber[j-1]
+// 	i++
+// }
+// console.log(reversedNumber)
+
+
