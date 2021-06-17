@@ -6,6 +6,7 @@ var findNumbers = function(nums) {
 			count=count+1 
 		
 	}
+}
 	return count 
     
 };
