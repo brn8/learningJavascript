@@ -16,8 +16,6 @@ let student = {
 
 
 
-//1572
-
 // redo the hard problem 
 
 
