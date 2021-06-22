@@ -7,17 +7,6 @@ let student = {
 }
 
 
-
-
-var n = [65,42,32,7,11,67,88,97,91,77,37,79]
-
-// display all the prime number from an given array 
-
-
-//Display all the prime number between 1-100
-
-
-
 //chapter 1 QUIZ
 
 
