@@ -15,6 +15,7 @@ let player2={
 	wicket: 10,
 
 }
+
 player1.age=22 // updates the players age
 console.log(player1)
 

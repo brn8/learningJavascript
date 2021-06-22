@@ -9,13 +9,13 @@
 //-------------------------------------------------------------------------------
 
 /*What is Object?
---> Object holds collection of multiple values in terms of properties/keys/attributes.
+--> Object holds collection of multiple values in terms of different properties/keys/attributes.
 To access particular entity from an object, we can use dot/square[] operator after objects 
 name to add/update/view an particular entity.  
 */
 
 let player1={ //handler or we can say objects
-	//inside objects/handler we have different properties/attributes with it's value 
+	//inside objects/handler we have different properties/attributes/keys with it's value 
 	name: "Rohit",
 	age: 35,
 	height: 6,
