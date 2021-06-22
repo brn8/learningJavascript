@@ -7,7 +7,7 @@ let student = {
 }
 
 
-//identify weather given number (#13) is a prime or not 
+
 
 var n = [65,42,32,7,11,67,88,97,91,77,37,79]
 
