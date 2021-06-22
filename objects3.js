@@ -46,6 +46,3 @@ console.log(players)
 
 /*what this program does is it stores all the handlers inside an array*/
 
-//-------------------------------------------------------------
-/*FOR MY LEARNING
-Find the highest runs scorer from the list of players*/
