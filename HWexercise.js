@@ -1,14 +1,10 @@
-//-----------------------------------------------------------------
-//function should return list of keys and list of values
+
 
 let student = {
 	name: "Brijesh",
 	friends_height: [5,4,6,7],
 
 }
-//create three function that takes student as a parament and print min, max and average. 
-//print min, max and average height
-
 
 
 //identify weather given number (#13) is a prime or not 
