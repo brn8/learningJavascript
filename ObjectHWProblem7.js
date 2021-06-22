@@ -9,7 +9,7 @@ var course2 = {
 }
 var course3 = {
 	name: "CS491",
-	grade: 95 
+	grade: 99 
 }
 var course4 = {
 	name: "IT120",
@@ -17,7 +17,7 @@ var course4 = {
 }
 var course5 = {
 	name: "CS435",
-	grade: 100
+	grade: 10
 }
 
 var listOfcourses = [course1,course2,course3,course4,course5];
@@ -35,6 +35,7 @@ function highestGrade (student){
 	var name = ""
 	for (var i=0; i<x.length; i++){
 		if(x[i].grade > max ){
+			max=x[i].grade
 			name=x[i].name
 		}
 	}
