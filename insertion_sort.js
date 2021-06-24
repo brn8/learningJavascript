@@ -6,6 +6,9 @@
  				num[j-1]= num[j];
  				num[j]=temp;
  			}
+ 			else {
+ 				break;
+ 			}
  		}
  	}
  	return num
