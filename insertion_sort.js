@@ -5,8 +5,7 @@
  				var temp = num[j-1];
  				num[j-1]= num[j];
  				num[j]=temp;
- 			}
- 			else {
+ 			}else {
  				break;
  			}
  		}
