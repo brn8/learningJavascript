@@ -3,18 +3,33 @@
 // add runs, wickets, boundaries 
 
 function crickerStat(name){
-	function strikeRate(runs, balls){
+	let runs = 0;
+	let balls = 0;
+	
+	function strikeRate(){
 		return runs/balls*100;
 	}
-	function printStats(runs, balls){
+	
+	function printStats(){
 		console.log("Name:"+name,"Runs:"+runs,"Balls:"+balls, "strikeRate:"+strikeRate(runs, balls))
 	}
-	return printStats
-}
-var stats = crickerStat("Rohit");
-stats(50,15)
+	
+	function addScore(run, ball) {
+		runs += run
+		balls += ball
+	}
 
-stats = crickerStat("Kohli");
-stats(52,16)
+	return {
+		printStats: printStats,
+		addScore: addScore,
+		strikeRate: strikeRate,
+	}
+}
+var rohit = crickerStat("Rohit");
+rohit.addScore(73, 100);
+rohit.printStats();
+
+// var kohli = crickerStat("Kohli");
+// stats(52,16)
 
 
