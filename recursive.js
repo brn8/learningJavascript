@@ -1,9 +1,9 @@
 function f(n){
 	//base case
-	if(n==15){
+	if(n==0){
 		return //break condition
 	}
 	console.log(n)
-	f(n+1)
+	f(n-1)
 }
-f(1)
+f(10)

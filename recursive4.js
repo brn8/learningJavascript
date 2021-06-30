@@ -21,3 +21,4 @@ function oddNumber(num){
 	oddNumber(num-2)
 }
 oddNumber(28)
+
