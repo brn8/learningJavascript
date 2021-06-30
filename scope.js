@@ -1,5 +1,5 @@
-// var a = 0;
-// console.log(a);
+var a = 0;
+console.log(a);
 
 
 /*What happens during run time?
@@ -12,9 +12,9 @@
 */
 //-----------------------------------------------------------------------
 
-// function f(){
-// 	console.log("Hello World");
-// }
+function f(){
+	console.log("Hello World");
+}
 
 // f()
 /*What happens during run time?
@@ -27,12 +27,12 @@
 
 */
 //-------------------------------------------------------------------------
-// function f(a){
-// 	var b = 2
-// 	return a+b+c
-// }
-// var c = 1;
-// console.log(f(2))
+function f(a){
+	var b = 2
+	return a+b+c
+}
+var c = 1;
+console.log(f(2))
 
 /*What happens during run time?
 1. The compiler tells the scope that there is a global variable f, c and function variable a, b.
@@ -50,12 +50,12 @@ about that variable and scope knows that there is variable a so it send the memo
 12. flocoman moves to next line and it know that rhs value of a, b, and c so it does the calculation and lastly it's prints the value
 */
 //---------------------------------------------------------------------
-// function f(a){
-// 	var b = 2
-// 	return a+b+c
-// }
-// console.log(f(2))
-// var c = 1;
+function f(a){
+	var b = 2
+	return a+b+c
+}
+console.log(f(2))
+var c = 1;
 
 /*What happens during run time?
 1. The compiler tells the scope that there is a global variable f, c and function variable a, b.
@@ -82,7 +82,7 @@ console.log(f(2));
 console.log(b)
 
 /*What happens during run time?
-1. The compiler tells the scope that there is a global variable f and function variable a, b.
+1. The compiler tells the scope that there is a global variable f and function variable a.
 2. Scope knows about those variables.
 3. Then flocoman does the tracing, and on the line 1, it knows that it's function so flocoman gets out of the function. 
 4. Now flocoman moves to next line and ask scope if you know about variable f and scope knows that there is an variable f so it send the memory address of that variable to the flocoman.
