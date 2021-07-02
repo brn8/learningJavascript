@@ -13,6 +13,5 @@ var arraySign = function(nums) {
 	else{
 		return 0
 	}
-    
 };
 console.log(arraySign([-1,1,1,0,-1]))
