@@ -29,7 +29,7 @@ function studentGrades(name){
 }
 
 var student = studentGrades("Brijesh")
-student.grades(10);
-student.grades(12);
+student.grades(10)
+student.grades(80)
 student.printReportCart()
 
