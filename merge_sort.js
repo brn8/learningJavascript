@@ -1,8 +1,4 @@
-// 1,3,5
-// 2,4
-//complete this
-//watch the video of merge sort 
-function sortedNumbers(arr, arr1){
+function merge(arr, arr1){
 	var temp_arr=[]
 	var i = 0;
 	var j = 0;
@@ -29,21 +25,18 @@ function sortedNumbers(arr, arr1){
 	
 	return temp_arr
 }
-var arr = [1,10]
-var arr1 = [5,7,9,20,25,100]
-console.log(sortedNumbers(arr,arr1))
 
-//INPUT
-// arr = [3]
-// arr1 = [1],
+function mergeSort(arr){
+	if(arr.length<=1){
+		return arr;
+	}
+	var mid = Math.trunc((arr.length)/2)
+	var left = (arr.slice(0,mid))
+	var right=(arr.slice(mid,arr.length))
+	var arr1 = mergeSort(left);
+	var arr2 = mergeSort(right);
+	return merge(arr1,arr2)
+	
+}
 
-// arr = [1,2]
-// arr1 = [3,4]
-
-// arr = [1,7]
-// arr1 = [2,5]
-
-// arr = [1,10]
-// arr1 = [5,7,9,20,25,100]
-
-
+console.log(mergeSort([5,7,6,5]))
