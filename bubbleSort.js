@@ -9,10 +9,11 @@ function bubbleSort(arr){
 				count++;
 			}
 		}
+		console.log(arr)
 		if(count==0){
 			break;
 		}
 	}
 	return arr
 }
-console.log(bubbleSort([1,2,9,8,5]))
+bubbleSort([1,2,9,8,5])
