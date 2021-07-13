@@ -33,9 +33,7 @@ function mergeSort(arr){
 	var mid = Math.trunc((arr.length)/2)
 	var left = (arr.slice(0,mid))
 	var right=(arr.slice(mid,arr.length))
-	var arr1 = mergeSort(left);
-	var arr2 = mergeSort(right);
-	return merge(arr1,arr2)
+	return merge( mergeSort(left) , mergeSort(right))
 	
 }
 
