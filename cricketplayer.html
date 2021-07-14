@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="C:\Users\brije\OneDrive\Desktop\practice\cricketplayer.css">
+    <link rel="stylesheet" href="C:\Users\brije\OneDrive\Desktop\HW1\cricketplayer.css">
 </head>
 <body>
     <div class=main>
@@ -49,32 +49,39 @@
             <tr>
                 <th>Test<br>(2013-present)</br></th>
                 <th>39</th>
-                <th>2679</th>
+                <th id="testruns">2679</th>
                 <th>46.2</th>
                 <th>57.9</th>
               </tr>
               <tr>
                 <th>ODI<br>(2007-present)</br></th>
                 <th>227</th>
-                <th>9205</th>
+                <th id="odiruns">9205</th>
                 <th>49.0</th>
                 <th>88.9</th>
               </tr>
               <tr>
                 <th>T20I<br>(2007-present)</br></th>
                 <th>111</th>
-                <th>2864</th>
+                <th id="t20runs">2864</th>
                 <th>32.5</th>
                 <th>139.0</th>
               </tr>
               <tr>
                 <th>IPL<br>(2008-present)</br></th>
                 <th>207</th>
-                <th>5480</th>
+                <th id="iplruns">5480</th>
                 <th>31.5</th>
                 <th>130.5</th>
               </tr>
           </table>
+    </div>
+    <div class="inputtext">
+      <label>Format:</label>
+      <input type="text" id="input" >
+      <label>Runs:</label>
+      <input type="text" id="input1">
+      <button onclick="myfunction()">Submit</button>
     </div>
     <div class="overview">
         <h2>Overview</h2>
@@ -86,4 +93,41 @@
     </div>
     </div>
 </body>
+<script>
+function myfunction(){
+  format = document.getElementById("input").value;
+  switch(format){
+    case "Test":
+    case "test":
+      var existence = document.getElementById("testruns").innerHTML;
+      var current = document.getElementById("input1").value;
+      var total = parseFloat(existence) + parseFloat(current)
+      document.getElementById("testruns").innerHTML=total
+      break;
+    case "ODI":
+    case "odi":
+    case "Odi":
+      var existence = document.getElementById("odiruns").innerHTML;
+      var current = document.getElementById("input1").value;
+      var total1 = parseFloat(existence) + parseFloat(current)
+      document.getElementById("odiruns").innerHTML=total1;
+      break;
+    case "T20":
+    case "t20":
+      var existence = document.getElementById("t20runs").innerHTML;
+      var current = document.getElementById("input1").value;
+      var total2 = parseFloat(existence) + parseFloat(current)
+      document.getElementById("t20runs").innerHTML=total2;
+      break;
+    case "IPL":
+    case "ipl":
+    case "Ipl":
+      var existence = document.getElementById("iplruns").innerHTML;
+      var current = document.getElementById("input1").value;
+      var total3 = parseFloat(existence) + parseFloat(current)
+      document.getElementById("iplruns").innerHTML=total3;
+      break;
+  }
+}
+</script>
 </html>
