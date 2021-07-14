@@ -32,7 +32,7 @@ Average	O(n2)
 Space Complexity	O(1)
 Stability	Yes
 var bubbleSort = function(arr){
-	for(let i =0; i<arr.length-2; i++){
+	for(let i =0; i<arr.length-1; i++){
 		var count = 0
 		for(let j=0; j<arr.length-1-i; j++){
 			if(arr[j]>arr[j+1]){
@@ -117,4 +117,24 @@ var mergeSort = function(arr) {
 	return merge(arr1,arr2)
 }
 console.log(mergeSort([14,33,27,10,35,19,42,44]));
+*/
+
+/*binary search
+var binarySearch = function(arr,num,starting, ending){
+	var mid = Math.trunc((starting+ending)/2);
+	if(starting>ending){
+		return -1
+	}
+	if(num==arr[mid]){
+		return mid
+	}
+	if(num<arr[mid]){
+		return binarySearch(arr,num,starting,mid-1)
+	}
+	if(num>arr[mid]){
+		return binarySearch(arr,num,mid+1,ending)
+	}
+}
+var array = [10,20,30,40,50,60,70,80,90,100];
+console.log(binarySearch(array,60,0,array.length-1));
 */
