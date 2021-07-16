@@ -3,8 +3,8 @@ var isPowerOfTwo = function(n) {
 		return true
 	}
 	if(n%2==0 && n>1){
-		var n = n/2;
-		return isPowerOfTwo(n)
+		var num = n/2;
+		return isPowerOfTwo(num)
 	}
 	return false
 };
