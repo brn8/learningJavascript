@@ -3,8 +3,7 @@ var isPowerOfFour = function(n) {
 		return true
 	}
 	if(n%4==0 && n>3){
-		var num = n/4;
-		return isPowerOfFour(num)
+		return isPowerOfFour(n/4)
 	}
 	return false
 
