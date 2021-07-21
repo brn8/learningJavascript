@@ -6,128 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="C:\Users\brije\OneDrive\Desktop\HW1\cricketplayer.css">
+    <script src="cricketplayer.js"></script>
 </head>
-<body>
-    <div class=main>
-    <div class="card">
-        <h1>Rohit Sharma </h1>
-        <img src="https://i.pinimg.com/236x/57/27/e7/5727e7eb4807853cd2799fc67a11cd1f--shikhar-dhawan-virat-kohli.jpg">
-    </div>
-    <div class="about">
-        <h2>About</h2>
-        <p>Rohit Gurunath Sharma is an Indian cricketer who represents the country in international cricket. On the domestic level, Rohit plays first-class cricket for Mumbai. Rohit is the present vice-captain for the Indian cricket team in limited-overs cricket. He is also the present captain of Mumbai Indians in the Indian Premier League.</p>
-    </div>
-    <div class="career">
-        <h2>IPL Career</h2>
-        <p>Rohit Sharma is the most successful captain and has led Mumbai Indians to 5 IPL titles.</p>
-        <img src="https://staticg.sportskeeda.com/editor/2018/12/39668-15453237226555-800.jpg" height="100" width="150">
-        <img src="https://static.india.com/wp-content/uploads/2015/05/ipl-2015-champions.jpg" height="100" width="150">
-        <img src="https://resources.platform.iplt20.com/IPL/photo/2017/05/21/f52b7519-0d52-4c4a-a47c-de5e26de159d/CI1I4728.JPG" height="100" width="150">
-        <img src="https://resources.platform.iplt20.com/photo-resources/IPL/photo/2019/05/12/669be1f9-6664-402a-aa42-a83ccaa3a443/IMG_1133.JPG?width=2000&height=1333" height="100" width="150">
-        <img src="https://img.olympicchannel.com/images/image/private/t_16-9_3200/primary/u4vjp5xs7mbfm2hyesv5" height="100" width="150">
-       
-    </div>
-    <div class="career1">
-        <h2>International Career</h2>
-        <p>Rohit made his international debut for India at a one-day match against Ireland in Belfast on 23 June 2007. Sharma started opening the Indian innings with Shikhar Dhawan in the 2013 ICC Champions Trophy, and the gamble turned out to be a huge success. He scored a mammoth 264 from 173 deliveries against Sri Lanka at Eden Gardens in Kolkata. Sharma was the recipient of the Golden Bat award for scoring the most number of runs in ICC World Cup 2019.</p>
-        <img src="https://resize.indiatvnews.com/en/resize/newbucket/715_-/2018/11/rohit-pti-1542093868.jpg" height="150" width="200">
-        <img src="https://pbs.twimg.com/media/D-zTcRMVUAAiIrM.png" height="150" width="200">
-        <img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2020/01/15/889642-rohit-sharma.jpg" height="150" width="190">
-       
-       
-    </div>
-    <div class="stats">
-        <h2>Stats</h2>
+<body onload="loadElements()">
+    <div id="stats">
+        <!--h2>Stats</h2>
         <table>
             <tr>
               <th>Format</th>
               <th>Match</th>
+              <th>Inn</th>
+              <th>Not Out</th> 
               <th>Runs</th>
+              <th>HS</th>
               <th>Avg</th>
+              <th>Ball Faced</th>
               <th>SR</th>
             </tr>
             <tr>
                 <th>Test<br>(2013-present)</br></th>
-                <th>39</th>
-                <th id="testruns">2679</th>
-                <th>46.2</th>
-                <th>57.9</th>
+                <th id="testmatch">39</th>
+                <th id="testinn">66</th>
+                <th id="testnotout">8</th>
+                <th myattribute="hello_world" id="testruns">2679</th>
+                <th id="tesths">212</th>
+                <th id="testavg">46.2</th>
+                <th id="testballfaced">4627</th>
+                <th id="testsr">57.9</th>
               </tr>
               <tr>
                 <th>ODI<br>(2007-present)</br></th>
-                <th>227</th>
+                <th id="odimatch">227</th>
+                <th id="odiinn">220</th>
+                <th id="odinotout">32</th>
                 <th id="odiruns">9205</th>
-                <th>49.0</th>
-                <th>88.9</th>
+                <th id="odihs">264</th>
+                <th id="odiavg">49.0</th>
+                <th id="odiballfaced">10354</th>
+                <th id="odisr">88.9</th>
               </tr>
               <tr>
                 <th>T20I<br>(2007-present)</br></th>
-                <th>111</th>
+                <th id="t20match">111</th>
+                <th id="t20inn">103</th>
+                <th id="t20notout">15</th>
                 <th id="t20runs">2864</th>
-                <th>32.5</th>
-                <th>139.0</th>
+                <th id="t20hs">118</th>
+                <th id="t20avg">32.5</th>
+                <th id="t20ballfaced">2061</th>
+                <th id="t20sr">139.0</th>
               </tr>
               <tr>
                 <th>IPL<br>(2008-present)</br></th>
-                <th>207</th>
+                <th id="iplmatch">207</th>
+                <th id="iplinn">202</th>
+                <th id="iplnotout">28</th>
                 <th id="iplruns">5480</th>
-                <th>31.5</th>
-                <th>130.5</th>
+                <th id="iplhs">109</th>
+                <th id="iplavg">31.5</th>
+                <th id="iplballfaced">4199</th>
+                <th id="iplsr">130.5</th>
               </tr>
-          </table>
+          </table-->
     </div>
     <div class="inputtext">
       <label>Format:</label>
-      <input type="text" id="input" >
+      <input type="text" id="input">
+      <label>Match Played:</label>
+      <input type="text" id="match">
+      <label>Inning Played:</label>
+      <input type="text" id="inn">
+      <label>Was he Out?:</label>
+      <input type="text" id="notout">
       <label>Runs:</label>
-      <input type="text" id="input1">
+      <input type="number" id="input1">
+      <label>Ball Faced:</label>
+      <input type="number" id="ballfaced">
       <button onclick="myfunction()">Submit</button>
     </div>
-    <div class="overview">
-        <h2>Overview</h2>
-        <p><b>Full Name: </b>Rohit Gurunath Sharma</p>
-        <p><b>Born: </b> April 30, 1987, Bansod, Nagpur, Maharashtra</p>
-        <p><b>Age: </b>34</p>
-        <p><b>Height: </b>5′ 7″</p>
-        <p><b>Role: </b>Top-order Batsman/Right-handed</p>
-    </div>
-    </div>
 </body>
-<script>
-function myfunction(){
-  format = document.getElementById("input").value;
-  switch(format){
-    case "Test":
-    case "test":
-      var existence = document.getElementById("testruns").innerHTML;
-      var current = document.getElementById("input1").value;
-      var total = parseFloat(existence) + parseFloat(current)
-      document.getElementById("testruns").innerHTML=total
-      break;
-    case "ODI":
-    case "odi":
-    case "Odi":
-      var existence = document.getElementById("odiruns").innerHTML;
-      var current = document.getElementById("input1").value;
-      var total1 = parseFloat(existence) + parseFloat(current)
-      document.getElementById("odiruns").innerHTML=total1;
-      break;
-    case "T20":
-    case "t20":
-      var existence = document.getElementById("t20runs").innerHTML;
-      var current = document.getElementById("input1").value;
-      var total2 = parseFloat(existence) + parseFloat(current)
-      document.getElementById("t20runs").innerHTML=total2;
-      break;
-    case "IPL":
-    case "ipl":
-    case "Ipl":
-      var existence = document.getElementById("iplruns").innerHTML;
-      var current = document.getElementById("input1").value;
-      var total3 = parseFloat(existence) + parseFloat(current)
-      document.getElementById("iplruns").innerHTML=total3;
-      break;
-  }
-}
-</script>
 </html>
