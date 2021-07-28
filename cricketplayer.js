@@ -125,6 +125,15 @@ function myfunction(){
   }
 
   function loadElements(){
+    playersCard();
+    playersAbout();
+    playersCareers();
+    playersOverview();
+    tableStats();
+    inputForm();
+  }
+
+  function playersCard(){
     let divCard = document.createElement('div');
     divCard.setAttribute("id","card");
     document.body.appendChild(divCard)
@@ -137,7 +146,8 @@ function myfunction(){
     
     card.appendChild(cardHeader);
     card.appendChild(cardImage)
-
+  }
+  function playersAbout(){
     let letAbout=document.createElement('div');
     letAbout.setAttribute("id","about");
     document.body.appendChild(letAbout);
@@ -150,7 +160,9 @@ function myfunction(){
     
     about.appendChild(aboutHeader);
     about.appendChild(aboutParagraph);
+  }
 
+  function playersCareers(){
     let divCareer = document.createElement('div');
     divCareer.setAttribute("id", "career");
     document.body.appendChild(divCareer)
@@ -216,7 +228,8 @@ function myfunction(){
     career1.appendChild(career1Image);
     career1.appendChild(career1Image1);
     career1.appendChild(career1Image2);
-
+  }
+  function playersOverview(){
     let divOverview = document.createElement('div');
     divOverview.setAttribute("id","overview");
     document.body.appendChild(divOverview);
@@ -243,8 +256,68 @@ function myfunction(){
     overview.appendChild(overviewParagraph2);
     overview.appendChild(overviewParagraph3);
     overview.appendChild(overviewParagraph4);
-    
+  }
 
+  function inputForm(){
+    let formDiv = document.createElement('div');
+    formDiv.setAttribute("id","inputtext");
+    document.body.appendChild(formDiv);
+
+    let form = document.getElementById("inputtext");
+    let label = document.createElement("label");
+    let input = document.createElement('input');
+    let label1 = document.createElement("label");
+    let inputs1 = document.createElement('input');
+    let label2 = document.createElement("label");
+    let input2 = document.createElement('input');
+    let label3 = document.createElement("label");
+    let input3 = document.createElement('input');
+    let label4 = document.createElement("label");
+    let input4 = document.createElement('input');
+    let label5 = document.createElement("label");
+    let input5 = document.createElement('input');
+    let formButton = document.createElement('button');
+
+    
+    label.innerHTML='Format:';
+    input.setAttribute('type',"text");
+    input.setAttribute('id', 'input');
+    label1.innerHTML='Match Played:';
+    inputs1.setAttribute('type',"text");
+    inputs1.setAttribute('id', 'match');
+    label2.innerHTML='Inning Played:';
+    input2.setAttribute('type',"text");
+    input2.setAttribute('id', 'inn');
+    label3.innerHTML='Was he Out?:';
+    input3.setAttribute('type',"text");
+    input3.setAttribute('id', 'notout');
+    label4.innerHTML='Runs:';
+    input4.setAttribute('type',"number");
+    input4.setAttribute('id', 'input1');
+    label5.innerHTML='Ball Faced:';
+    input5.setAttribute('type',"number");
+    input5.setAttribute('id', 'ballfaced');
+    formButton.setAttribute('onclick','myfunction()');
+    formButton.innerHTML="Submit";
+  
+    
+    
+    form.appendChild(label);
+    form.appendChild(input);
+    form.appendChild(label1);
+    form.appendChild(inputs1);
+    form.appendChild(label2);
+    form.appendChild(input2);
+    form.appendChild(label3);
+    form.appendChild(input3);
+    form.appendChild(label4);
+    form.appendChild(input4);
+    form.appendChild(label5);
+    form.appendChild(input5);
+    form.appendChild(formButton);
+  }
+  
+  function tableStats(){
     let statsInfo = document.createElement('div');
     statsInfo.setAttribute("id","stats");
     document.body.appendChild(statsInfo);
@@ -442,73 +515,10 @@ function myfunction(){
     statsTr4.appendChild(tr4Th6);
     statsTr4.appendChild(tr4Th7);
     statsTr4.appendChild(tr4Th8);
-   
-
+  
 
     statsHeader.innerHTML="Stats";
 
     stats.appendChild(statsHeader);
     stats.appendChild(statsTable);
-    
-
-    let formDiv = document.createElement('div');
-    formDiv.setAttribute("id","inputtext");
-    document.body.appendChild(formDiv);
-
-    let form = document.getElementById("inputtext");
-    let label = document.createElement("label");
-    let input = document.createElement('input');
-    let label1 = document.createElement("label");
-    let inputs1 = document.createElement('input');
-    let label2 = document.createElement("label");
-    let input2 = document.createElement('input');
-    let label3 = document.createElement("label");
-    let input3 = document.createElement('input');
-    let label4 = document.createElement("label");
-    let input4 = document.createElement('input');
-    let label5 = document.createElement("label");
-    let input5 = document.createElement('input');
-    let formButton = document.createElement('button');
-
-    
-    label.innerHTML='Format:';
-    input.setAttribute('type',"text");
-    input.setAttribute('id', 'input');
-    label1.innerHTML='Match Played:';
-    inputs1.setAttribute('type',"text");
-    inputs1.setAttribute('id', 'match');
-    label2.innerHTML='Inning Played:';
-    input2.setAttribute('type',"text");
-    input2.setAttribute('id', 'inn');
-    label3.innerHTML='Was he Out?:';
-    input3.setAttribute('type',"text");
-    input3.setAttribute('id', 'notout');
-    label4.innerHTML='Runs:';
-    input4.setAttribute('type',"number");
-    input4.setAttribute('id', 'input1');
-    label5.innerHTML='Ball Faced:';
-    input5.setAttribute('type',"number");
-    input5.setAttribute('id', 'ballfaced');
-    formButton.setAttribute('onclick','myfunction()');
-    formButton.innerHTML="Submit";
-  
-    
-    
-    form.appendChild(label);
-    form.appendChild(input);
-    form.appendChild(label1);
-    form.appendChild(inputs1);
-    form.appendChild(label2);
-    form.appendChild(input2);
-    form.appendChild(label3);
-    form.appendChild(input3);
-    form.appendChild(label4);
-    form.appendChild(input4);
-    form.appendChild(label5);
-    form.appendChild(input5);
-    form.appendChild(formButton)
- 
   }
-
-
-  
