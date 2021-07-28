@@ -82,7 +82,7 @@ td, th {
     border-radius:15px;
 }
 
-.inputtext{
+#inputtext{
   position: absolute;
     left:1000px;
     top:800px;

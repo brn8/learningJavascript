@@ -243,75 +243,271 @@ function myfunction(){
     overview.appendChild(overviewParagraph2);
     overview.appendChild(overviewParagraph3);
     overview.appendChild(overviewParagraph4);
+    
 
-    let stats = document.getElementById('stats');
+    let statsInfo = document.createElement('div');
+    statsInfo.setAttribute("id","stats");
+    document.body.appendChild(statsInfo);
+    let stats = document.getElementById("stats");
     let statsHeader = document.createElement("h2");
     let statsTable = document.createElement("table");
     let statsTr = document.createElement("tr");
-    let statsTh = document.createElement("th");
-    let statsTh1 = document.createElement("th");
-    let statsTh2 = document.createElement("th");
-    let statsTh3 = document.createElement("th");
-    let statsTh4 = document.createElement("th");
-    let statsTh5 = document.createElement("th");
-    let statsTh6 = document.createElement("th");
-    let statsTh7 = document.createElement("th");
-    let statsTh8 = document.createElement("th");
+    let trTh = document.createElement("th");
+    let trTh1 = document.createElement("th");
+    let trTh2 = document.createElement("th");
+    let trTh3 = document.createElement("th");
+    let trTh4 = document.createElement("th");
+    let trTh5 = document.createElement("th");
+    let trTh6 = document.createElement("th");
+    let trTh7 = document.createElement("th");
+    let trTh8 = document.createElement("th");
 
-    statsTh.innerHTML="Format";
-    statsTh1.innerHTML="Match";
-    statsTh2.innerHTML="Inn";
-    statsTh3.innerHTML="Not Out";
-    statsTh4.innerHTML="Runs";
-    statsTh5.innerHTML="HS";
-    statsTh6.innerHTML="Avg";
-    statsTh7.innerHTML="Ball Faced";
-    statsTh8.innerHTML="SR";
-    
-    
+    let statsTr1 = document.createElement("tr");
+    let tr1Th = document.createElement("th");
+    let tr1Th1 = document.createElement("th");
+    let tr1Th2 = document.createElement("th");
+    let tr1Th3 = document.createElement("th");
+    let tr1Th4 = document.createElement("th");
+    let tr1Th5 = document.createElement("th");
+    let tr1Th6 = document.createElement("th");
+    let tr1Th7 = document.createElement("th");
+    let tr1Th8 = document.createElement("th");
+
+    let statsTr2 = document.createElement("tr");
+    let tr2Th = document.createElement("th");
+    let tr2Th1 = document.createElement("th");
+    let tr2Th2 = document.createElement("th");
+    let tr2Th3 = document.createElement("th");
+    let tr2Th4 = document.createElement("th");
+    let tr2Th5 = document.createElement("th");
+    let tr2Th6 = document.createElement("th");
+    let tr2Th7 = document.createElement("th");
+    let tr2Th8 = document.createElement("th");
+
+    let statsTr3 = document.createElement("tr");
+    let tr3Th = document.createElement("th");
+    let tr3Th1 = document.createElement("th");
+    let tr3Th2 = document.createElement("th");
+    let tr3Th3 = document.createElement("th");
+    let tr3Th4 = document.createElement("th");
+    let tr3Th5 = document.createElement("th");
+    let tr3Th6 = document.createElement("th");
+    let tr3Th7 = document.createElement("th");
+    let tr3Th8 = document.createElement("th");
+
+    let statsTr4 = document.createElement("tr");
+    let tr4Th = document.createElement("th");
+    let tr4Th1 = document.createElement("th");
+    let tr4Th2 = document.createElement("th");
+    let tr4Th3 = document.createElement("th");
+    let tr4Th4 = document.createElement("th");
+    let tr4Th5 = document.createElement("th");
+    let tr4Th6 = document.createElement("th");
+    let tr4Th7 = document.createElement("th");
+    let tr4Th8 = document.createElement("th");
+
+    trTh.innerHTML="Format";
+    trTh1.innerHTML="Match";
+    trTh2.innerHTML="Inn";
+    trTh3.innerHTML="Not Out";
+    trTh4.innerHTML="Runs";
+    trTh5.innerHTML="HS";
+    trTh6.innerHTML="Avg";
+    trTh7.innerHTML="Ball Faced";
+    trTh8.innerHTML="SR";
+
+    tr1Th.innerHTML="Test<br>(2013-present)</br>";
+    tr1Th1.innerHTML="39";
+    tr1Th2.innerHTML="66";
+    tr1Th3.innerHTML="8";
+    tr1Th4.innerHTML="2679";
+    tr1Th5.innerHTML="212";
+    tr1Th6.innerHTML="46.2";
+    tr1Th7.innerHTML="4627";
+    tr1Th8.innerHTML="57.9";
+
+    tr2Th.innerHTML="ODI<br>(2007-present)</br>";
+    tr2Th1.innerHTML="227";
+    tr2Th2.innerHTML="220";
+    tr2Th3.innerHTML="32";
+    tr2Th4.innerHTML="9205";
+    tr2Th5.innerHTML="264";
+    tr2Th6.innerHTML="49.0";
+    tr2Th7.innerHTML="10354";
+    tr2Th8.innerHTML="88.9";
+
+    tr3Th.innerHTML="T20I<br>(2007-present)</br>";
+    tr3Th1.innerHTML="111";
+    tr3Th2.innerHTML="103";
+    tr3Th3.innerHTML="15";
+    tr3Th4.innerHTML="2864";
+    tr3Th5.innerHTML="118";
+    tr3Th6.innerHTML="32.5";
+    tr3Th7.innerHTML="2061";
+    tr3Th8.innerHTML="139.0";
+
+    tr4Th.innerHTML="IPL<br>(2008-present)</br>";
+    tr4Th1.innerHTML="207";
+    tr4Th2.innerHTML="202";
+    tr4Th3.innerHTML="28";
+    tr4Th4.innerHTML="5480";
+    tr4Th5.innerHTML="109";
+    tr4Th6.innerHTML="31.5";
+    tr4Th7.innerHTML="4199";
+    tr4Th8.innerHTML="130.5";
+
+    tr1Th1.setAttribute("id","testmatch");
+    tr1Th2.setAttribute("id","testinn");
+    tr1Th3.setAttribute("id","testnotout");
+    tr1Th4.setAttribute("id","testruns");
+    tr1Th5.setAttribute("id","tesths");
+    tr1Th6.setAttribute("id","testavg");
+    tr1Th7.setAttribute("id","testballfaced");
+    tr1Th8.setAttribute("id","testsr");
+
+    tr2Th1.setAttribute("id","odimatch");
+    tr2Th2.setAttribute("id","odiinn");
+    tr2Th3.setAttribute("id","odinotout");
+    tr2Th4.setAttribute("id","odiruns");
+    tr2Th5.setAttribute("id","odihs");
+    tr2Th6.setAttribute("id","odiavg");
+    tr2Th7.setAttribute("id","odiballfaced");
+    tr2Th8.setAttribute("id","odisr");
+
+    tr3Th1.setAttribute("id","t20match");
+    tr3Th2.setAttribute("id","t20inn");
+    tr3Th3.setAttribute("id","t20notout");
+    tr3Th4.setAttribute("id","t20runs");
+    tr3Th5.setAttribute("id","t20hs");
+    tr3Th6.setAttribute("id","t20avg");
+    tr3Th7.setAttribute("id","t20ballfaced");
+    tr3Th8.setAttribute("id","t20sr");
+
+    tr4Th1.setAttribute("id","iplmatch");
+    tr4Th2.setAttribute("id","iplinn");
+    tr4Th3.setAttribute("id","iplnotout");
+    tr4Th4.setAttribute("id","iplruns");
+    tr4Th5.setAttribute("id","iplhs");
+    tr4Th6.setAttribute("id","iplavg");
+    tr4Th7.setAttribute("id","iplballfaced");
+    tr4Th8.setAttribute("id","iplsr");
+ 
     statsTable.appendChild(statsTr);
-    statsTr.appendChild(statsTh);
-    statsTr.appendChild(statsTh1);
-    statsTr.appendChild(statsTh2);
-    statsTr.appendChild(statsTh3);
-    statsTr.appendChild(statsTh4);
-    statsTr.appendChild(statsTh5);
-    statsTr.appendChild(statsTh6);
-    statsTr.appendChild(statsTh7);
-    statsTr.appendChild(statsTh8);
+    statsTr.appendChild(trTh);
+    statsTr.appendChild(trTh1);
+    statsTr.appendChild(trTh2);
+    statsTr.appendChild(trTh3);
+    statsTr.appendChild(trTh4);
+    statsTr.appendChild(trTh5);
+    statsTr.appendChild(trTh6);
+    statsTr.appendChild(trTh7);
+    statsTr.appendChild(trTh8);
+    statsTable.appendChild(statsTr1);
+    statsTr1.appendChild(tr1Th);
+    statsTr1.appendChild(tr1Th1);
+    statsTr1.appendChild(tr1Th2);
+    statsTr1.appendChild(tr1Th3);
+    statsTr1.appendChild(tr1Th4);
+    statsTr1.appendChild(tr1Th5);
+    statsTr1.appendChild(tr1Th6);
+    statsTr1.appendChild(tr1Th7);
+    statsTr1.appendChild(tr1Th8);
+    statsTable.appendChild(statsTr2);
+    statsTr2.appendChild(tr2Th);
+    statsTr2.appendChild(tr2Th1);
+    statsTr2.appendChild(tr2Th2);
+    statsTr2.appendChild(tr2Th3);
+    statsTr2.appendChild(tr2Th4);
+    statsTr2.appendChild(tr2Th5);
+    statsTr2.appendChild(tr2Th6);
+    statsTr2.appendChild(tr2Th7);
+    statsTr2.appendChild(tr2Th8);
+    statsTable.appendChild(statsTr3);
+    statsTr3.appendChild(tr3Th);
+    statsTr3.appendChild(tr3Th1);
+    statsTr3.appendChild(tr3Th2);
+    statsTr3.appendChild(tr3Th3);
+    statsTr3.appendChild(tr3Th4);
+    statsTr3.appendChild(tr3Th5);
+    statsTr3.appendChild(tr3Th6);
+    statsTr3.appendChild(tr3Th7);
+    statsTr3.appendChild(tr3Th8);
+    statsTable.appendChild(statsTr4);
+    statsTr4.appendChild(tr4Th);
+    statsTr4.appendChild(tr4Th1);
+    statsTr4.appendChild(tr4Th2);
+    statsTr4.appendChild(tr4Th3);
+    statsTr4.appendChild(tr4Th4);
+    statsTr4.appendChild(tr4Th5);
+    statsTr4.appendChild(tr4Th6);
+    statsTr4.appendChild(tr4Th7);
+    statsTr4.appendChild(tr4Th8);
+   
 
 
     statsHeader.innerHTML="Stats";
-    
+
     stats.appendChild(statsHeader);
-
-    let stats1Tr = document.createElement("tr");
-    let stats1Th = document.createElement("th");
-    let stats1Th1= document.createElement("th");
-    let stats1Th2= document.createElement("th");
-    let stats1Th3= document.createElement("th");
-    let stats1Th4= document.createElement("th");
-    let stats1Th5= document.createElement("th");
-    let stats1Th6= document.createElement("th");
-    let stats1Th7= document.createElement("th");
-    let stats1Th8= document.createElement("th");
-
-
-
-    stats1Th.innerHTML="Test<br>(2013-present)</br>";
-    stats1Th1.innerHTML="39";
-    stats1Th1.setAttribute("id","testmatch");
-    stats1Th2.innerHTML="66";
-    stats1Th2.setAttribute("id","testinn")
-
-    statsTable.appendChild(stats1Tr);
-    stats1Tr.appendChild(stats1Th)
-    stats1Tr.appendChild(stats1Th1)
-    stats1Tr.appendChild(stats1Th2)
-
-
     stats.appendChild(statsTable);
+    
 
+    let formDiv = document.createElement('div');
+    formDiv.setAttribute("id","inputtext");
+    document.body.appendChild(formDiv);
+
+    let form = document.getElementById("inputtext");
+    let label = document.createElement("label");
+    let input = document.createElement('input');
+    let label1 = document.createElement("label");
+    let inputs1 = document.createElement('input');
+    let label2 = document.createElement("label");
+    let input2 = document.createElement('input');
+    let label3 = document.createElement("label");
+    let input3 = document.createElement('input');
+    let label4 = document.createElement("label");
+    let input4 = document.createElement('input');
+    let label5 = document.createElement("label");
+    let input5 = document.createElement('input');
+    let formButton = document.createElement('button');
+
+    
+    label.innerHTML='Format:';
+    input.setAttribute('type',"text");
+    input.setAttribute('id', 'input');
+    label1.innerHTML='Match Played:';
+    inputs1.setAttribute('type',"text");
+    inputs1.setAttribute('id', 'match');
+    label2.innerHTML='Inning Played:';
+    input2.setAttribute('type',"text");
+    input2.setAttribute('id', 'inn');
+    label3.innerHTML='Was he Out?:';
+    input3.setAttribute('type',"text");
+    input3.setAttribute('id', 'notout');
+    label4.innerHTML='Runs:';
+    input4.setAttribute('type',"number");
+    input4.setAttribute('id', 'input1');
+    label5.innerHTML='Ball Faced:';
+    input5.setAttribute('type',"number");
+    input5.setAttribute('id', 'ballfaced');
+    formButton.setAttribute('onclick','myfunction()');
+    formButton.innerHTML="Submit";
+  
+    
+    
+    form.appendChild(label);
+    form.appendChild(input);
+    form.appendChild(label1);
+    form.appendChild(inputs1);
+    form.appendChild(label2);
+    form.appendChild(input2);
+    form.appendChild(label3);
+    form.appendChild(input3);
+    form.appendChild(label4);
+    form.appendChild(input4);
+    form.appendChild(label5);
+    form.appendChild(input5);
+    form.appendChild(formButton)
+ 
   }
 
 
