@@ -16,12 +16,15 @@ function statement(){
 	console.log("Last transaction:",this.lastTransaction);
 }
 
+var method = {
+	deposit:deposit,
+	withdraw: withdraw,
+	statement:statement
+}
 function piggyBank(v){ 
 	var obj = {};
 	(v==undefined)?obj.balance=obj.lastTransaction=0:obj.balance=obj.lastTransaction=v;
-	obj.deposit=deposit;
-	obj.withdraw=withdraw;
-	obj.statement=statement;
+	obj.__proto__=method;
 	return obj
 }
 
