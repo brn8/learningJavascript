@@ -31,7 +31,7 @@ function piggyBank(v){
 var p1 = piggyBank();
 var p2 = piggyBank();
 var p3 = piggyBank(10);
-p1.deposit(10)
+p1.deposit(10)		
 p2.deposit(50);
 p1.deposit(101);
 p2.withdraw(10);
