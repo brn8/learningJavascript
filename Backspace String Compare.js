@@ -19,7 +19,7 @@ console.log(backspaceCompare("ab#c","ad#c"));
 
 
 // var backspaceCompare = function(s, t) {
-//     var arrS= [];
+//  var arrS= [];
 // 	var arrT = [];
 // 	for(let i=0; i<s.length; i++){
 // 		if(s[i]=="#"){
