@@ -1,3 +1,4 @@
+//leetcode1209
 var removeDuplicates = function(s, k) {
 	var arr = [];
 	for (let i=0; i<s.length; i++){
@@ -18,6 +19,6 @@ var removeDuplicates = function(s, k) {
 			}
 		}
 	}
-	return arr.join("")
+	return arr.join("");
 };
 console.log(removeDuplicates("deeedbbcccbdaa",3));
