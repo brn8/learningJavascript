@@ -10,7 +10,8 @@ function creatingTD(id, bgColor, name){
     td.bgColor = bgColor;
     td.fontsize = "150px";
     td.style = "font-size:140px";
-    td.setAttribute("onclick","myfunction(id)");
+    td.setAttribute("onclick","myfunction("+id+")");
+    td.className = name;
     if(name != undefined){
         td.innerHTML = name;
     }
@@ -41,7 +42,33 @@ function tr(arr,color,name){
 
 function myfunction(id){
     var ids = id;
-    ids.bgColor="red";
+    var arr = ["a","b","c","d","e","f","g","h"];
+    console.log(ids.className)
+    console.log(document.getElementById(ids.id[0]+(parseFloat(ids.id[1]))));
+    console.log(document.getElementById(ids.id[0]+(parseFloat(ids.id[1]))).className);
+    if(document.getElementById(ids.id[0]+(parseFloat(ids.id[1]))).className=="&#9823" && document.getElementById(ids.id[0]+(parseFloat(ids.id[1])+1)).className=="undefined"){
+        document.getElementById(ids.id[0]+(parseFloat(ids.id[1])+1)).bgColor="red";
+    }
+
+    if(document.getElementById(ids.id[0]+(parseFloat(ids.id[1]))).bgColor=="red" && document.getElementById(ids.id[0]+(parseFloat(ids.id[1]-1))).className=="&#9823"){
+        ids.innerHTML="&#9823";
+        ids.className="&#9823";
+        document.getElementById(ids.id[0]+(parseFloat(ids.id[1])-1)).innerHTML="";
+        document.getElementById(ids.id[0]+(parseFloat(ids.id[1])-1)).className="undefined";
+        (document.getElementById(ids.id[0]+(parseFloat(ids.id[1])+1)).bgColor=="grey")?ids.bgColor="white":ids.bgColor="grey";
+    }
+
+
+    if(document.getElementById(String.fromCharCode(ids.id[0].charCodeAt(0) + 1)+(parseFloat(ids.id[1])+1)).className=="&#9817" && ids.className=="&#9823"){
+        document.getElementById(String.fromCharCode(ids.id[0].charCodeAt(0) + 1)+(parseFloat(ids.id[1])+1)).bgColor="red";
+    }
+    if(ids.bgColor=="red" && ids.className=="&#9817"){
+        ids.innerHTML="&#9823";
+        ids.className="&#9823"; 
+        document.getElementById(String.fromCharCode(ids.id[0].charCodeAt(0) - 1)+(parseFloat(ids.id[1])-1)).innerHTML="";
+        document.getElementById(String.fromCharCode(ids.id[0].charCodeAt(0) - 1)+(parseFloat(ids.id[1])-1)).className="undefined";
+    }
+
 }
 //-----------------------------------------------------------
 // var tr8 = document.createElement("tr");
